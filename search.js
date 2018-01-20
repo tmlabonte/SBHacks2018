@@ -17,19 +17,21 @@ function onYouTubeApiLoad() {
     gapi.client.setApiKey('AIzaSyB0xaH8jN_ZhFwflugHhfPJPkZEPXSjKeY');
 }
 
-function search() {
-    // Use the JavaScript client library to create a search.list() API call.
-    var request = gapi.client.youtube.search.list({
-        part: 'snippet',
-        q: query.song + " dance"
-    });
-    
-    // Send the request to the API server,
-    // and invoke onSearchRepsonse() with the response.
-    request.execute(onSearchResponse);
-}
-
 // Called automatically with the response of the YouTube API request.
 function onSearchResponse(response) {
     showResponse(response);
 }
+
+window.onhashchange = function() {
+	for (var i=0; i < cities.size(); i += 2) {
+		// Use the JavaScript client library to create a search.list() API call.
+		var request = gapi.client.youtube.search.list({
+		    part: 'snippet',
+		    q: query.song + " dance " + cities[i]
+		});
+		
+		// Send the request to the API server,
+		// and invoke onSearchRepsonse() with the response.
+		request.execute(onSearchResponse);
+	}
+};
