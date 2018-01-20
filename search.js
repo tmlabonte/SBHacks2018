@@ -23,12 +23,12 @@ function onSearchResponse(response) {
 }
 
 // store url on load
-var currentPage = "https://tmlabonte.github.io/SBHacks2018";
+var rootPage = "https://tmlabonte.github.io/SBHacks2018/";
 
 // listen for changes
 setInterval(function()
 {
-    if (currentPage != window.location.href)
+    if (window.location.href != rootPage)
     {
     	var cities = ["Los Angeles", "New York", "New Delhi", "Sydney", "Beijing", "Rio", "London", "Lagos", "Moscow", "Cairo", "Tokyo", "Cape Town", "Bogota"];
         for (var i=0; i < cities.length; i++) {
@@ -43,7 +43,5 @@ setInterval(function()
         	// and invoke onSearchRepsonse() with the response.
         	request.execute(onSearchResponse);
         }
-        // page has changed, set new page as 'current'
-        currentPage = window.location.href;
     }
 }, 500);
