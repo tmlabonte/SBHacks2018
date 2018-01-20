@@ -28,7 +28,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1">Song: </span>
         </div>
-        <input type="text" class="form-control" id="searchBar" name="song" placeholder="" onkeydown="getInput(this)">
+        <input type="text" class="form-control" id="searchBar" name="song" placeholder="">
       </div>
       <!-- <img src= "pinkicon.JPG" style="padding-top: 1rem; width: 5%; height: auto;" type="button" onclick="myFunction()" value="Submit"> -->
     </form>
@@ -53,9 +53,9 @@
     <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
+        var uluru = {lat: 0, lng: 0};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
+          zoom: 1,
           center: uluru
         });
         var marker = new google.maps.Marker({
