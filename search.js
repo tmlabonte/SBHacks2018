@@ -3,10 +3,7 @@
 
 // Helper function to display JavaScript value on HTML page.
 function showResponse(response) {
-    var responseString = JSON.stringify(response, '', 2);
-    document.getElementById('response').innerHTML = responseString;
-    var obj = JSON.parse(responseString);
-    console.log(obj.items.videoId);
+    console.log(response.items.videoId);
 }
 
 // Called automatically when JavaScript client library is loaded.
