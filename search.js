@@ -10,12 +10,12 @@ function showResponse(response) {
 // Called automatically when JavaScript client library is loaded.
 function onClientLoad() {
     gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
-    console.log("clint loaded");
 }
 
 // Called automatically when YouTube API interface is loaded (see line 9).
 function onYouTubeApiLoad() {
     gapi.client.setApiKey('AIzaSyB0xaH8jN_ZhFwflugHhfPJPkZEPXSjKeY');
+    search();
 }
 
 // Called automatically with the response of the YouTube API request.
@@ -23,22 +23,24 @@ function onSearchResponse(response) {
     showResponse(response);
 }
 
-// store url on load
-var rootPage = "https://tmlabonte.github.io/SBHacks2018/";
+function search() {
+	// store url on load
+	var rootPage = "https://tmlabonte.github.io/SBHacks2018/";
 
-if (window.location.href != rootPage)
-{
-	var cities = ["Los Angeles", "New York", "New Delhi", "Sydney", "Beijing", "Rio", "London", "Lagos", "Moscow", "Cairo", "Tokyo", "Cape Town", "Bogota"];
-    for (var i=0; i < cities.length; i++) {
-    	// Use the JavaScript client library to create a search.list() API call.
-    	var request = gapi.client.youtube.search.list({
-    	    q: query.song + " dance " + cities[i],
-    	    maxResults: 1,
-    	    part: "snippet"
-    	}); 
-    	
-    	// Send the request to the API server,
-    	// and invoke onSearchRepsonse() with the response.
-    	request.execute(onSearchResponse);
-    }
+	if (window.location.href != rootPage)
+	{
+		var cities = ["Los Angeles", "New York", "New Delhi", "Sydney", "Beijing", "Rio", "London", "Lagos", "Moscow", "Cairo", "Tokyo", "Cape Town", "Bogota"];
+	    for (var i=0; i < cities.length; i++) {
+	    	// Use the JavaScript client library to create a search.list() API call.
+	    	var request = gapi.client.youtube.search.list({
+	    	    q: query.song + " dance " + cities[i],
+	    	    maxResults: 1,
+	    	    part: "id"
+	    	}); 
+	    	
+	    	// Send the request to the API server,
+	    	// and invoke onSearchRepsonse() with the response.
+	    	request.execute(onSearchResponse);
+	    }
+	}
 }
