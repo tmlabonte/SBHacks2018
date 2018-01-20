@@ -32,8 +32,8 @@ var rootPage = "https://tmlabonte.github.io/SBHacks2018/";
     	// Use the JavaScript client library to create a search.list() API call.
     	var request = gapi.client.youtube.search.list({
     	    q: query.song + " dance " + cities[i],
-    	    maxResults: 5,
-    	    part: "id"
+    	    maxResults: 1,
+    	    part: "snippet"
     	}); 
     	
     	// Send the request to the API server,
