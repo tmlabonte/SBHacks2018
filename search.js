@@ -24,13 +24,13 @@ function onSearchResponse(response) {
 
 window.onhashchange = function() {
 	var cities = ["Los Angeles", "New York", "New Delhi", "Sydney", "Beijing", "Rio", "London", "Lagos", "Moscow", "Cairo", "Tokyo", "Cape Town", "Bogota"];
-	for (var i=0; i < cities.size(); i ++) {
+	for (var i=0; i < cities.length; i++) {
 		// Use the JavaScript client library to create a search.list() API call.
 		var request = gapi.client.youtube.search.list({
 		    q: query.song + " dance " + cities[i],
 		    maxResults: 5,
 		    part: id
-		});
+		}); 
 		
 		// Send the request to the API server,
 		// and invoke onSearchRepsonse() with the response.
