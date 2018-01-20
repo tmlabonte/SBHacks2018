@@ -64,9 +64,9 @@
         var latLons = [34.0522, 118.2437, 40.7128, 74.0060, 28.6139, 77.2090, 33.8688, 151.2093, 39.9042, 116.4074];
         for(var i = 0; i < 10; i++)
         {
+          console.log(latLons[i]);
           var marker = new google.maps.Marker({
           position: {lat:latLons[i], lng: latLons[++i]},
-          console.log(latLons[i]);
           map: map
         });
         //   var marker = new google.maps.Marker({
