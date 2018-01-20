@@ -30,7 +30,7 @@ window.onhashchange = function() {
 		    q: query.song + " dance " + cities[i],
 		    maxResults: 5,
 		    part: id
-		});
+		}); 
 		
 		// Send the request to the API server,
 		// and invoke onSearchRepsonse() with the response.
