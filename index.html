@@ -59,10 +59,10 @@
 
       /** Initializes the map and the custom popup. */
     
-        function initMap() 
-        {
-          var uluru = {lat: 22, lng: 0};
-          var map = new google.maps.Map(document.getElementById('map'), {
+      function initMap() 
+      {
+        var uluru = {lat: 22, lng: 0};
+        var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 2,
           center: uluru
         });
@@ -84,6 +84,7 @@
             popup.setMap(map);
           }       
         }
+      } 
 
         /** Defines the Popup class. */
         function definePopupClass() {
@@ -156,6 +157,7 @@
                     e.stopPropagation();
                   });
                 });
+              };
           };
     </script>
     <script async defer
