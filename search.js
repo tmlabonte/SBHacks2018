@@ -14,11 +14,7 @@ function onClientLoad() {
 
 // Called automatically when YouTube API interface is loaded (see line 9).
 function onYouTubeApiLoad() {
-    // This API key is intended for use only in this lesson.
-    // See https://goo.gl/PdPA1 to get a key for your own applications.
     gapi.client.setApiKey('AIzaSyB0xaH8jN_ZhFwflugHhfPJPkZEPXSjKeY');
-
-    search();
 }
 
 function search() {
