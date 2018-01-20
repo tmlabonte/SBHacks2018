@@ -23,7 +23,7 @@ function onSearchResponse(response) {
 }
 
 // store url on load
-var currentPage = window.location.href;
+var currentPage = "https://tmlabonte.github.io/SBHacks2018";
 
 // listen for changes
 setInterval(function()
