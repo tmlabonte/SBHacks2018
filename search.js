@@ -29,7 +29,7 @@ window.onhashchange = function() {
 		var request = gapi.client.youtube.search.list({
 		    q: query.song + " dance " + cities[i],
 		    maxResults: 5,
-		    part: id
+		    part: "id"
 		}); 
 		
 		// Send the request to the API server,
