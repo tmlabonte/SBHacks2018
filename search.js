@@ -2,7 +2,7 @@ var searchBar = document.getElementById("searchBar");
 var song = searchBar.value;
 function getInput(ele) {
     if(event.key === 'Enter') {
-        console.log(song);       
+        console.log(ele.value);       
     }
 }
 console.log(song);
