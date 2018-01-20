@@ -65,9 +65,8 @@
         for(int i = 0; i < 10; i++)
         {
           var marker = new google.maps.Marker({
-          position: {`lat:${latLons[i]}, lng: {latLons[++i]},
+          position: {lat:latLons[i], lng: latLons[++i]},
           map: map
-          }
         });
         //   var marker = new google.maps.Marker({
         //   position: {lat:latLons[i], lng: latLons[i+1]},
