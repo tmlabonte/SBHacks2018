@@ -10,6 +10,13 @@
 
     <title>Hello, dance!</title>
 
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+
     <link rel="stylesheet" type="text/css" href="index.css" media="screen, handheld">
         <link rel="icon" href="pinkicon.JPG">
   </head>
@@ -26,6 +33,7 @@
       <!-- <img src= "pinkicon.JPG" style="padding-top: 1rem; width: 5%; height: auto;" type="button" onclick="myFunction()" value="Submit"> -->
     </form>
 
+
     <!-- Optional JavaScript -->
 
     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
@@ -41,6 +49,25 @@
       };
       firebase.initializeApp(config);
     </script>
+    <!-- GoogleMap -->
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+    <!-- Params -->
     <script>
       function getQueryParams(qs) {
       qs = qs.split('+').join(' ');
