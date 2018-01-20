@@ -3,7 +3,10 @@
 
 // Helper function to display JavaScript value on HTML page.
 function showResponse(response) {
-    console.log(response.items.videoId);
+    var id = response.items[0].id.videoId;
+    var src = 'https://img.youtube.com/vi/' + id + '/1.jpg';
+    var url = 'https://youtube.com/watch?v=' + id;
+    console.log(url);
 }
 
 // Called automatically when JavaScript client library is loaded.
