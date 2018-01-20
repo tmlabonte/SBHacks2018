@@ -74,7 +74,7 @@
           for(var i = 0; i < 26; i++)
           {
             var marker = new google.maps.Marker({
-            position: {lat:latLons[i], lng: latLons[1+i]},
+            position: {lat:latLons[i], lng: latLons[++i]},
             map: map
             });
 
