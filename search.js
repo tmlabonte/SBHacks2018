@@ -22,18 +22,29 @@ function onSearchResponse(response) {
     showResponse(response);
 }
 
-window.onhashchange = function() {
-	var cities = ["Los Angeles", "New York", "New Delhi", "Sydney", "Beijing", "Rio", "London", "Lagos", "Moscow", "Cairo", "Tokyo", "Cape Town", "Bogota"];
-	for (var i=0; i < cities.length; i++) {
-		// Use the JavaScript client library to create a search.list() API call.
-		var request = gapi.client.youtube.search.list({
-		    q: query.song + " dance " + cities[i],
-		    maxResults: 5,
-		    part: "id"
-		}); 
-		
-		// Send the request to the API server,
-		// and invoke onSearchRepsonse() with the response.
-		request.execute(onSearchResponse);
-	}
-};
+// store url on load
+var currentPage = window.location.href;
+
+// listen for changes
+setInterval(function()
+{
+    if (currentPage != window.location.href)
+    {
+        // page has changed, set new page as 'current'
+        currentPage = window.location.href;
+
+        var cities = ["Los Angeles", "New York", "New Delhi", "Sydney", "Beijing", "Rio", "London", "Lagos", "Moscow", "Cairo", "Tokyo", "Cape Town", "Bogota"];
+        for (var i=0; i < cities.length; i++) {
+        	// Use the JavaScript client library to create a search.list() API call.
+        	var request = gapi.client.youtube.search.list({
+        	    q: query.song + " dance " + cities[i],
+        	    maxResults: 5,
+        	    part: "id"
+        	}); 
+        	
+        	// Send the request to the API server,
+        	// and invoke onSearchRepsonse() with the response.
+        	request.execute(onSearchResponse);
+        }
+    }
+}, 500);
