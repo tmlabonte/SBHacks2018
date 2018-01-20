@@ -7,5 +7,17 @@ body {
 
 h1 {
 	padding-top: 2rem;
+	padding-bottom: 2rem;
 	font-size: 3rem;
 }
+
+.input-group {
+	width: 100%;
+	padding-right: 25%;
+	padding-left: 25%;
+}
+
+form {
+	display: inline;
+}
+

@@ -15,8 +15,38 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
+    <!-- try this -->
+    <form>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Song: </span>
+        </div>
+      <!-- <label for="exampleInputEmail1">Email address</label> -->
+        <input type="text" class="form-control" id="searchBar" name="song" placeholder="">
+      </div>
+      <img src= "pinkicon.JPG" style="padding-top: 1rem; width: 5%; height: auto;" type="button" onclick="myFunction()" value="Submit">
+    </form>
 
     <!-- Optional JavaScript -->
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB547azXxXf-EcVonW50f-4ZR2PpR9UXno",
+        authDomain: "sb-hacks-2018.firebaseapp.com",
+        databaseURL: "https://sb-hacks-2018.firebaseio.com",
+        projectId: "sb-hacks-2018",
+        storageBucket: "sb-hacks-2018.appspot.com",
+        messagingSenderId: "942162307287"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <!-- <script>
+      function myFunction() {
+      document.getElementById("searchBar").value = ;
+    }
+    </script> -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
