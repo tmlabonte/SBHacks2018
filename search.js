@@ -5,6 +5,8 @@
 function showResponse(response) {
     var responseString = JSON.stringify(response, '', 2);
     document.getElementById('response').innerHTML += responseString;
+    var obj = responseString;
+    console.log(obj.items.videoId);
 }
 
 // Called automatically when JavaScript client library is loaded.
@@ -24,10 +26,8 @@ function onSearchResponse(response) {
 }
 
 function search() {
-	// store url on load
-	var rootPage = "https://tmlabonte.github.io/SBHacks2018/";
-
-	if (window.location.href != rootPage)
+	// check if user entered a song
+	if (window.location.href != "https://tmlabonte.github.io/SBHacks2018/")
 	{
 		var cities = ["Los Angeles", "New York", "New Delhi", "Sydney", "Beijing", "Rio", "London", "Lagos", "Moscow", "Cairo", "Tokyo", "Cape Town", "Bogota"];
 	    for (var i=0; i < cities.length; i++) {
