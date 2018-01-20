@@ -1,5 +1,11 @@
 body {
-	font-family: 'Georgia', Helvetica, sans-serif;
-  	/*font-size: 2rem;*/
+	/*font-family: 'Georgia', Helvetica, sans-serif;
+  	font-size: 2rem;*/
   	line-height: 1rem;
+  	text-align: center;
+}
+
+h1 {
+	padding-top: 2rem;
+	font-size: 3rem;
 }
