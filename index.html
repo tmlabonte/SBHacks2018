@@ -69,25 +69,37 @@
             // pics[0] + 
             // '>' +
             // '</div>';
-            var contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-            '<div id="bodyContent">'+
-            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-            '(last visited June 22, 2009).</p>'+
-            '</div>'+
-            '</div>';
 
-            var infowindow = new google.maps.InfoWindow({
-              content: contentString
-            });
+            var content = cities[i] + '<br/>' + '<img src = ' + pics[0] +'>'     
 
-            //HOW TO CLOSE IT THOUGH????
-            marker.addListener('mouseover', function() {
-              infowindow.open(map, this);
-            });
+            var infowindow = new google.maps.InfoWindow()
+
+            google.maps.event.addListener(marker,'mouseover', (function(marker,content,infowindow){ 
+                return function() {
+                    infowindow.setContent(content);
+                    infowindow.open(map, this);
+                };
+            })(marker,content,infowindow)); 
+
+            // var contentString = '<div id="content">'+
+            // '<div id="siteNotice">'+
+            // '</div>'+
+            // '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+            // '<div id="bodyContent">'+
+            // '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            // 'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+            // '(last visited June 22, 2009).</p>'+
+            // '</div>'+
+            // '</div>';
+
+            // var infowindow = new google.maps.InfoWindow({
+            //   content: contentString
+            // });
+
+            // //HOW TO CLOSE IT THOUGH????
+            // marker.addListener('mouseover', function() {
+            //   infowindow.open(map, this);
+            // });
           }       
         }
       } 
