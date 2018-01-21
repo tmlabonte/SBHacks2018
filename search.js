@@ -1,6 +1,8 @@
 // Your use of the YouTube API must comply with the Terms of Service:
 // https://developers.google.com/youtube/terms
 
+initMap();
+
 var currentSong = query.song;
 if (currentSong == undefined) {
 	document.getElementById("searchBar").defaultValue = "";
