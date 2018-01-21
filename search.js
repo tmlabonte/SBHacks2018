@@ -11,7 +11,14 @@ function showResponse(response) {
 
 // Called automatically when JavaScript client library is loaded.
 function onClientLoad() {
-	document.getElementById("searchBar").defaultValue = query.song;
+	var val = document.getElementById("searchBar").defaultValue;
+	var currentSong = query.song;
+	if (currentSong == undefined) {
+		val = "";
+	}
+	else {
+		val = currentSong;
+	}
     gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
 }
 
