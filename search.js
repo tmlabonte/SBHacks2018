@@ -11,10 +11,18 @@ else {
 
 // Helper function to display JavaScript value on HTML page.
 function showResponse(response) {
-    var id = response.items[0].id.videoId;
-    var src = 'https://img.youtube.com/vi/' + id + '/1.jpg';
-    var url = 'https://youtube.com/watch?v=' + id;
-    console.log(url);
+	var id = null;
+	var src = 'https://learn.getgrav.org/user/pages/11.troubleshooting/01.page-not-found/error-404.png';
+	var url = null;
+	try {
+		id = response.items[0].id.videoId;
+    	src = 'https://img.youtube.com/vi/' + id + '/1.jpg';
+    	url = 'https://youtube.com/watch?v=' + id;
+    	console.log(url);
+	}
+    catch(e) {
+    	console.log("Error");
+    }
 }
 
 // Called automatically when JavaScript client library is loaded.
