@@ -1,9 +1,6 @@
 // Your use of the YouTube API must comply with the Terms of Service:
 // https://developers.google.com/youtube/terms
 
-urlArr = [];
-imgArr = [];
-
 var currentSong = query.song;
 if (currentSong == undefined) {
 	document.getElementById("searchBar").defaultValue = "";
@@ -27,18 +24,17 @@ function showResponse(response) {
     	console.log("Error");
     }
     finally {
-    	urlArr.push(url);
-    	imgArr.push(src);
+    	document.getElementById("srcholder").innerHTML += src;
+		document.getElementById("urlholder").innerHTML += url;
     }
 }
 //WOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOW
-function writeTo(urlArr, srcArr, url, src) {
-	for(var i = 0; i < 26; i++)
-	{
-		document.getElementById("srcholder").innerHTML = srcArr[i];
-		document.getElementById("urlholder").innerHTML = urlArr[i];
-	}
-}
+// function writeTo(urlArr, imgArr) {
+// 	for(var i = 0; i < 13; i++)
+// 	{
+		
+// 	}
+// }
 
 // Called automatically when JavaScript client library is loaded.
 function onClientLoad() {
