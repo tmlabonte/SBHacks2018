@@ -29,7 +29,7 @@ function search() {
 	// check if user entered a song
 	if (window.location.href != "https://tmlabonte.github.io/SBHacks2018/")
 	{
-		var cities = ["Los Angeles", "New York", "India", "Australia", "China", "Brazil", "London", "Nigeria", "Russia", "Egypt", "Japan", "South Africa", "Colombia"];
+		var cities = ["Los Angeles", "New York", "India", "Australia", "China", "Brazil", "London", "Nigeria", "Russia", "Egypt", "Korea", "South Africa", "Colombia"];
 	    for (var i=0; i < cities.length; i++) {
 	    	// Use the JavaScript client library to create a search.list() API call.
 	    	var request = gapi.client.youtube.search.list({
