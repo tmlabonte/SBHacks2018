@@ -74,8 +74,8 @@
             // '>' +
             // '</div>';
             //WOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOW
-            console.log(urlArr[i]);
-            var content = cities[i] + '<br/>' + '<a href=' + urlArr[i] + '><img src = ' + imgArr[i] +'></a>'     
+            console.log(urlArr[i/2]);
+            var content = cities[i] + '<br/>' + '<a href=' + urlArr[i/2] + '><img src = ' + imgArr[i/2] +'></a>'     
             var infowindow = new google.maps.InfoWindow()
 
             google.maps.event.addListener(marker,'mouseover', (function(marker,content,infowindow){ 
