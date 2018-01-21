@@ -20,7 +20,6 @@ function showResponse(response) {
 		id = response.items[0].id.videoId;
     	src = 'https://img.youtube.com/vi/' + id + '/1.jpg';
     	url = 'https://youtube.com/watch?v=' + id;
-    	console.log(url);
 	}
     catch(e) {
     	console.log("Error");
@@ -28,6 +27,7 @@ function showResponse(response) {
     finally {
     	urlArr.push(url);
     	imgArr.push(src);
+    	console.log(url);
     }
 }
 //WOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOW
