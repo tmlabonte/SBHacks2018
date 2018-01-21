@@ -36,7 +36,8 @@ function search() {
 	    	    q: query.song + " dance " + cities[i],
 	    	    maxResults: 1,
 	    	    part: "id",
-	    	    order: "viewCount"
+	    	    order: "viewCount",
+	    	    type: "video"
 	    	}); 
 	    	
 	    	// Send the request to the API server,
