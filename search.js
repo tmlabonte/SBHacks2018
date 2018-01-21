@@ -27,7 +27,6 @@ function showResponse(response) {
     finally {
     	urlArr.push(url);
     	imgArr.push(src);
-    	console.log(urlArr);
     }
 }
 //WOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOW
