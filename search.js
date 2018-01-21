@@ -7,7 +7,7 @@ var currentSong = query.song;
 if (currentSong == undefined) {
 	document.getElementById("searchBar").defaultValue = "";
 }
-else {
+else {  
 	document.getElementById("searchBar").defaultValue = currentSong;
 }
 
