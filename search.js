@@ -3,13 +3,7 @@
 
 urlArr = [];
 imgArr = [];
-var currentSong = query.song;
-if (currentSong == undefined) {
-	document.getElementById("searchBar").defaultValue = "";
-}
-else {  
-	document.getElementById("searchBar").defaultValue = currentSong;
-}
+addedGmap = false;
 
 // Helper function to display JavaScript value on HTML page.
 function showResponse(response) {
@@ -44,6 +38,14 @@ function onYouTubeApiLoad() {
 // Called automatically with the response of the YouTube API request.
 function onSearchResponse(response) {
     showResponse(response);
+
+    if(!addedGmap) {
+    	addedGmap = true;
+	    var gmapScript = document.createElement("script");
+	    gmapScript.src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0xaH8jN_ZhFwflugHhfPJPkZEPXSjKeY&callback=initMap";
+
+	    document.body.appendChild(gmapScript);
+    }
 }
 
 function search() {
