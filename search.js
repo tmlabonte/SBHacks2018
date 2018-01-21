@@ -35,7 +35,8 @@ function search() {
 	    	var request = gapi.client.youtube.search.list({
 	    	    q: query.song + " dance " + cities[i],
 	    	    maxResults: 1,
-	    	    part: "id"
+	    	    part: "id",
+	    	    order: "viewCount"
 	    	}); 
 	    	
 	    	// Send the request to the API server,
