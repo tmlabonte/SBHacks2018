@@ -1,13 +1,12 @@
 // Your use of the YouTube API must comply with the Terms of Service:
 // https://developers.google.com/youtube/terms
 
-var val = document.getElementById("searchBar").defaultValue;
 var currentSong = query.song;
 if (currentSong == undefined) {
-	val = "";
+	document.getElementById("searchBar").defaultValue = "";
 }
 else {
-	val = currentSong;
+	document.getElementById("searchBar").defaultValue = currentSong;
 }
 
 // Helper function to display JavaScript value on HTML page.
