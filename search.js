@@ -60,7 +60,8 @@ function search() {
 	    	    maxResults: 1,
 	    	    part: "id",
 	    	    order: "viewCount",
-	    	    type: "video"
+	    	    type: "video",
+	    	    videoDefinition: "high"
 	    	}); 
 	    	
 	    	// Send the request to the API server,
