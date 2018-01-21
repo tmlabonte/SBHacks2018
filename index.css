@@ -6,6 +6,7 @@ body {
 }
 
 h1 {
+  font-family: 'Merriweather', serif;
 	color: #3d85e2; 
 	padding-top: 2rem;
 	padding-bottom: 2rem;
@@ -13,6 +14,7 @@ h1 {
 }
 
 .input-group {
+  font-family: 'Merriweather', serif;
 	width: 100%;
 	padding-right: 25%;
 	padding-left: 25%;
