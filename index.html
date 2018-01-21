@@ -39,13 +39,13 @@
     <div id="map"></div>
     <div id="srcholder"> "" </div>
     <div id="urlholder"> "" </div>
-    <script>
+    <!-- <script>
         //WOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOW
         var srca = [];
         var urla = [];
         urla.push(document.getElementById("urlholder").innerHTML);
         srca.push(document.getElementById("srcholder").innerHTML);
-    </script>
+    </script> -->
 
 <script>
     function initMap() 
@@ -75,7 +75,7 @@
             // '>' +
             // '</div>';
             //WOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOW
-            var content = cities[i] + '<br/>' + '<a href="' + urla[i] + '"><img src = ' + srca[i] +'></a>'     
+            var content = cities[i] + '<br/>' + '<a href="' + urlArr[i] + '"><img src = ' + imgArr[i] +'></a>'     
 
             var infowindow = new google.maps.InfoWindow()
 
