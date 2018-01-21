@@ -1,6 +1,15 @@
 // Your use of the YouTube API must comply with the Terms of Service:
 // https://developers.google.com/youtube/terms
 
+var val = document.getElementById("searchBar").defaultValue;
+var currentSong = query.song;
+if (currentSong == undefined) {
+	val = "";
+}
+else {
+	val = currentSong;
+}
+
 // Helper function to display JavaScript value on HTML page.
 function showResponse(response) {
     var id = response.items[0].id.videoId;
@@ -11,14 +20,6 @@ function showResponse(response) {
 
 // Called automatically when JavaScript client library is loaded.
 function onClientLoad() {
-	var val = document.getElementById("searchBar").defaultValue;
-	var currentSong = query.song;
-	if (currentSong == undefined) {
-		val = "";
-	}
-	else {
-		val = currentSong;
-	}
     gapi.client.load('youtube', 'v3', onYouTubeApiLoad);
 }
 
