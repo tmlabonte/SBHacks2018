@@ -64,21 +64,32 @@
             title: cities[i]
             });
             //HOW TO DO HTML AND JAVASCRIPT MIX???
-            var contentString = '<div id="content">' +
-            '<img src=' + 
-            pics[0] + 
-            '>' +
+            // var contentString = '<div id="content">' +
+            // '<img src=' + 
+            // pics[0] + 
+            // '>' +
+            // '</div>';
+            var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+            '<div id="bodyContent">'+
+            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+            '(last visited June 22, 2009).</p>'+
+            '</div>'+
             '</div>';
+
+            var infowindow = new google.maps.InfoWindow({
+              content: contentString
+            });
+
+            //HOW TO CLOSE IT THOUGH????
+            marker.addListener('mouseover', function() {
+              infowindow.open(map, marker);
+            });
           }       
         }
-        var infowindow = new google.maps.InfoWindow({
-          content: contentString
-        });
-
-        //HOW TO CLOSE IT THOUGH????
-        marker.addListener('mouseover', function() {
-          infowindow.open(map, marker);
-        });
       } 
     </script>
     <script async defer
