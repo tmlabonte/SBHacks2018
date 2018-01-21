@@ -29,13 +29,6 @@ function showResponse(response) {
     	imgArr.push(src);
     }
 }
-//WOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOWOW
-// function writeTo(urlArr, imgArr) {
-// 	for(var i = 0; i < 13; i++)
-// 	{
-		
-// 	}
-// }
 
 // Called automatically when JavaScript client library is loaded.
 function onClientLoad() {
