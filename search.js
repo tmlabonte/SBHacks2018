@@ -60,12 +60,20 @@ function search() {
 	    	    maxResults: 1,
 	    	    part: "id",
 	    	    order: "viewCount",
-	    	    type: "video"
+	    	    type: "video",
+	    	    videoDefinition: "high"
 	    	}); 
 	    	
 	    	// Send the request to the API server,
 	    	// and invoke onSearchRepsonse() with the response.
 	    	request.execute(onSearchResponse);
 	    }
+	}
+	else {
+		addedGmap = true;
+	    var gmapScript = document.createElement("script");
+	    gmapScript.src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0xaH8jN_ZhFwflugHhfPJPkZEPXSjKeY&callback=initMap";
+
+	    document.body.appendChild(gmapScript);
 	}
 }
