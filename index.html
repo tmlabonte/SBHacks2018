@@ -60,7 +60,7 @@
                     });
          
                     console.log(urlArr[i/2]);
-                    var content = cities[i] + '<br/>' + '<a href=' + urlArr[i/2] + ' target="_blank"><img src = ' + imgArr[i/2] +'></a>';
+                    var content = cities[i] + '<br/>' + '<a href=' + urlArr[i/2] + ' target="_blank"><img src = ' + imgArr[i/2] +' style = "width: 3rem; height: auto;"></a>';
                     var infowindow = new google.maps.InfoWindow();
 
                     google.maps.event.addListener(marker,'mouseover', (function(marker,content,infowindow){ 
@@ -90,7 +90,6 @@
       while (tokens = re.exec(qs)) {
           params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
       }
-
       return params;
     }
 
